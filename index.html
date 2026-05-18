@@ -512,12 +512,19 @@
       left: 0;
       right: 0;
       z-index: 100;
-      padding: 0 1.5rem;
       height: 68px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+    }
+    .navbar-inner {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .navbar.scrolled {
       background: rgba(15, 30, 43, 0.92);
@@ -603,14 +610,16 @@
      NAVBAR
 ================================================ -->
 <nav class="navbar" id="navbar">
-  <a href="#">
-    <img src="images/logo paulo para site.webp" alt="Professor Paulo Tavares" class="navbar-logo" />
-  </a>
-  <a href="https://wa.me/5562984498756?text=Olá%20Professor%20Paulo!%20Vim%20pela%20página%20das%20aulas%20em%20domicílio%20de%20viola%20caipira%20em%20Goiânia%20e%20Aparecida%20de%20Goiânia.%20Gostaria%20de%20saber%20sobre%20horários%20e%20disponibilidade"
-     target="_blank" rel="noopener" class="navbar-cta">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="var(--gold)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Falar no WhatsApp
-  </a>
+  <div class="navbar-inner">
+    <a href="#">
+      <img src="images/logo paulo para site.webp" alt="Professor Paulo Tavares" class="navbar-logo" />
+    </a>
+    <a href="https://wa.me/5562984498756?text=Olá%20Professor%20Paulo!%20Vim%20pela%20página%20das%20aulas%20em%20domicílio%20de%20viola%20caipira%20em%20Goiânia%20e%20Aparecida%20de%20Goiânia.%20Gostaria%20de%20saber%20sobre%20horários%20e%20disponibilidade"
+       target="_blank" rel="noopener" class="navbar-cta">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="var(--gold)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
 </nav>
 
 <!-- ================================================
@@ -894,48 +903,29 @@
       </div>
     </div>
 
-    <!-- Cards depoimento texto -->
+    <!-- Vídeos depoimento alunos -->
     <div class="grid-3" style="margin-bottom:3rem;">
-      <div class="glass reveal" style="border-radius:16px;padding:1.75rem;">
-        <div class="stars" style="margin-bottom:0.75rem;">★★★★★</div>
-        <p style="color:rgba(245,239,230,0.8);font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.7;font-style:italic;margin-bottom:1.25rem;">"Substitua por um depoimento real de aluno. Quanto tempo levou, o que aprendeu, como mudou sua vida."</p>
-        <div style="display:flex;align-items:center;gap:0.75rem;">
-          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--navy);font-size:1rem;">A</div>
-          <div>
-            <div style="color:var(--cream);font-size:0.88rem;font-weight:600;">Nome do Aluno</div>
-            <div style="color:var(--gold);font-size:0.75rem;letter-spacing:0.05em;">Goiânia, GO</div>
-          </div>
+      <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
+        <div style="position:relative;width:100%;padding-bottom:56.25%;">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/5Z5QXLOL9tw" title="Depoimento aluno — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
-      <div class="glass reveal reveal-delay-1" style="border-radius:16px;padding:1.75rem;">
-        <div class="stars" style="margin-bottom:0.75rem;">★★★★★</div>
-        <p style="color:rgba(245,239,230,0.8);font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.7;font-style:italic;margin-bottom:1.25rem;">"Substitua por um depoimento real de aluno. Quanto tempo levou, o que aprendeu, como mudou sua vida."</p>
-        <div style="display:flex;align-items:center;gap:0.75rem;">
-          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--navy);font-size:1rem;">B</div>
-          <div>
-            <div style="color:var(--cream);font-size:0.88rem;font-weight:600;">Nome do Aluno</div>
-            <div style="color:var(--gold);font-size:0.75rem;letter-spacing:0.05em;">Aparecida de Goiânia, GO</div>
-          </div>
+      <div class="reveal reveal-delay-1" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
+        <div style="position:relative;width:100%;padding-bottom:56.25%;">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/C0sI5TwnsyE" title="Depoimento aluno — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
-      <div class="glass reveal reveal-delay-2" style="border-radius:16px;padding:1.75rem;">
-        <div class="stars" style="margin-bottom:0.75rem;">★★★★★</div>
-        <p style="color:rgba(245,239,230,0.8);font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.7;font-style:italic;margin-bottom:1.25rem;">"Substitua por um depoimento real de aluno. Quanto tempo levou, o que aprendeu, como mudou sua vida."</p>
-        <div style="display:flex;align-items:center;gap:0.75rem;">
-          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--navy);font-size:1rem;">C</div>
-          <div>
-            <div style="color:var(--cream);font-size:0.88rem;font-weight:600;">Nome do Aluno</div>
-            <div style="color:var(--gold);font-size:0.75rem;letter-spacing:0.05em;">Goiânia, GO</div>
-          </div>
+      <div class="reveal reveal-delay-2" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
+        <div style="position:relative;width:100%;padding-bottom:56.25%;">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/1HPBdeSIAvc" title="Depoimento aluno — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </div>
 
     <!-- Prints -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
-      <div class="glass-gold reveal" style="border-radius:16px;padding:2.5rem;text-align:center;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold)" opacity="0.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span style="color:rgba(201,160,82,0.6);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.95rem;">Cole aqui prints de mensagens de alunos no WhatsApp</span>
+      <div class="reveal" style="display:flex;align-items:center;justify-content:center;">
+        <img src="images/dep04-josue.webp" alt="Depoimento WhatsApp — Josué, 62 anos tocando viola caipira" style="width:100%;max-width:340px;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,0.4);display:block;" loading="lazy" />
       </div>
       <div class="reveal reveal-delay-1" style="display:flex;flex-direction:column;gap:0.75rem;">
         <img src="images/dep01-afonso.webp" alt="Comentário YouTube — Afonso Carlos Pereira de Almeida" style="width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.3);display:block;" loading="lazy" />
