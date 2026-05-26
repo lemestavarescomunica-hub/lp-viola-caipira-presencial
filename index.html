@@ -628,6 +628,58 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--navy-deep); }
     ::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 3px; }
+
+    /* ===================== YOUTUBE FACADE ===================== */
+    .yt-facade {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      cursor: pointer;
+      background: #000;
+      overflow: hidden;
+    }
+    .yt-facade img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      display: block;
+    }
+    .yt-facade:hover img {
+      transform: scale(1.04);
+      opacity: 0.8;
+    }
+    .yt-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 48px;
+      background: rgba(23,46,64,0.88);
+      border: 2px solid rgba(201,160,82,0.5);
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+      z-index: 2;
+    }
+    .yt-facade:hover .yt-play {
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    .yt-facade iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
   </style>
 
   <!-- JSON-LD Schema -->
@@ -839,8 +891,11 @@
     </div>
 
     <div class="reveal" style="position:relative;width:100%;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(23,46,64,0.2);border:1px solid var(--cream-dark);">
-      <div style="position:relative;width:100%;padding-bottom:56.25%;">
-        <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/YQ2_U5dgEcY" title="Conheça o Professor Paulo Tavares — Aulas de Viola Caipira em Domicílio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <div class="yt-facade" data-videoid="YQ2_U5dgEcY" data-title="Conheça o Professor Paulo Tavares — Aulas de Viola Caipira em Domicílio">
+        <img src="https://img.youtube.com/vi/YQ2_U5dgEcY/hqdefault.jpg" alt="Conheça o Professor Paulo Tavares — Aulas de Viola Caipira em Domicílio" loading="lazy" />
+        <button class="yt-play" aria-label="Assistir vídeo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -948,18 +1003,27 @@
     <!-- Vídeos -->
     <div class="grid-3" style="margin-bottom:3rem;">
       <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
-        <div style="position:relative;width:100%;padding-bottom:56.25%;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/Fh2HtL7RzVU" title="Depoimento aluno 1 — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-facade" data-videoid="Fh2HtL7RzVU" data-title="Depoimento aluno 1 — Professor Paulo Tavares">
+          <img src="https://img.youtube.com/vi/Fh2HtL7RzVU/hqdefault.jpg" alt="Depoimento aluno 1 — Professor Paulo Tavares" loading="lazy" />
+          <button class="yt-play" aria-label="Assistir depoimento">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </button>
         </div>
       </div>
       <div class="reveal reveal-delay-1" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
-        <div style="position:relative;width:100%;padding-bottom:56.25%;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/wYU1TVCMpZE" title="Depoimento aluno 2 — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-facade" data-videoid="wYU1TVCMpZE" data-title="Depoimento aluno 2 — Professor Paulo Tavares">
+          <img src="https://img.youtube.com/vi/wYU1TVCMpZE/hqdefault.jpg" alt="Depoimento aluno 2 — Professor Paulo Tavares" loading="lazy" />
+          <button class="yt-play" aria-label="Assistir depoimento">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </button>
         </div>
       </div>
       <div class="reveal reveal-delay-2" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
-        <div style="position:relative;width:100%;padding-bottom:56.25%;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/AxDfpsRs9nk" title="Depoimento aluno 3 — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-facade" data-videoid="AxDfpsRs9nk" data-title="Depoimento aluno 3 — Professor Paulo Tavares">
+          <img src="https://img.youtube.com/vi/AxDfpsRs9nk/hqdefault.jpg" alt="Depoimento aluno 3 — Professor Paulo Tavares" loading="lazy" />
+          <button class="yt-play" aria-label="Assistir depoimento">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -967,18 +1031,27 @@
     <!-- Vídeos depoimento alunos -->
     <div class="grid-3" style="margin-bottom:3rem;">
       <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
-        <div style="position:relative;width:100%;padding-bottom:56.25%;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/5Z5QXLOL9tw" title="Depoimento aluno — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-facade" data-videoid="5Z5QXLOL9tw" data-title="Depoimento aluno — Professor Paulo Tavares">
+          <img src="https://img.youtube.com/vi/5Z5QXLOL9tw/hqdefault.jpg" alt="Depoimento aluno — Professor Paulo Tavares" loading="lazy" />
+          <button class="yt-play" aria-label="Assistir depoimento">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </button>
         </div>
       </div>
       <div class="reveal reveal-delay-1" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
-        <div style="position:relative;width:100%;padding-bottom:56.25%;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/C0sI5TwnsyE" title="Depoimento aluno — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-facade" data-videoid="C0sI5TwnsyE" data-title="Depoimento aluno — Professor Paulo Tavares">
+          <img src="https://img.youtube.com/vi/C0sI5TwnsyE/hqdefault.jpg" alt="Depoimento aluno — Professor Paulo Tavares" loading="lazy" />
+          <button class="yt-play" aria-label="Assistir depoimento">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </button>
         </div>
       </div>
       <div class="reveal reveal-delay-2" style="border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.35);">
-        <div style="position:relative;width:100%;padding-bottom:56.25%;">
-          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0;" src="https://www.youtube.com/embed/1HPBdeSIAvc" title="Depoimento aluno — Professor Paulo Tavares" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="yt-facade" data-videoid="1HPBdeSIAvc" data-title="Depoimento aluno — Professor Paulo Tavares">
+          <img src="https://img.youtube.com/vi/1HPBdeSIAvc/hqdefault.jpg" alt="Depoimento aluno — Professor Paulo Tavares" loading="lazy" />
+          <button class="yt-play" aria-label="Assistir depoimento">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -1397,6 +1470,21 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  // YouTube Facade — carrega iframe somente ao clicar
+  document.querySelectorAll('.yt-facade').forEach(function(facade) {
+    facade.addEventListener('click', function() {
+      var id = this.dataset.videoid;
+      var title = this.dataset.title || 'Vídeo';
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = title;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      this.innerHTML = '';
+      this.appendChild(iframe);
+    });
+  });
 
   // FAQ accordion
   document.querySelectorAll('.faq-trigger').forEach(btn => {
